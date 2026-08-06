@@ -2,11 +2,11 @@
 
 set -e
 
-if [[ $# -eq 0 ]]; then
-    echo "error: commit message is required"
-    echo "usage: $0 commit message"
-    exit 1
-fi
+# if [[ $# -eq 0 ]]; then
+#     echo "error: commit message is required"
+#     echo "usage: $0 commit message"
+#     exit 1
+# fi
 
 message="$*"
 
@@ -20,5 +20,5 @@ if git diff --cached --quiet; then
     exit 0
 fi
 
-git commit -m "$message"
+git commit 
 git status
