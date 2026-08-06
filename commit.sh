@@ -8,7 +8,6 @@ if [[ $# -eq 0 ]]; then
     exit 1
 fi
 
-echo "11111111111111111111"
 message="$*"
 
 rm -rf src/.main.rs.bak*
