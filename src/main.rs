@@ -1,4 +1,4 @@
-//! Select a number and then try for finding it
+//! Select a random number and then try for finding it
 //! by binary search pattern.
 
 use rand::RngExt;
