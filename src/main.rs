@@ -1,27 +1,37 @@
-//! I am learning how to using Mutex.
-
-use std::{cmp::Ordering, sync::mpsc::channel};
+//! Select a number and then try for finding it
+//! by binary search pattern.
 
 use rand::RngExt;
+use std::cmp::Ordering;
 
 fn main() {
     println!("\n");
 
-    let (tx1, rx1) = channel::<Commands>();
-    let (tx2, rx2) = channel::<Commands>();
+    let mut min: u32 = 12345;
+    let mut max: u32 = 98765;
+    let mut loop_count: u32 = 0;
+    let mut guess_number: u32;
+    let my_selected_number: u32 = rand::rng().random_range(min..=max);
 
-    let chosen_number: u32 = rand::rng().random_range(0..101);
+    'guess: loop {
+        loop_count += 1;
+
+        guess_number = (min + max) / 2;
+
+        match &guess_number.cmp(&my_selected_number) {
+            Ordering::Equal => {
+                println!("I found the selected number. it is: {}", guess_number);
+                println!("loop count: {}", loop_count);
+                break 'guess;
+            }
+            Ordering::Greater => {
+                max = guess_number - 1;
+            }
+            Ordering::Less => {
+                min = guess_number + 1;
+            }
+        } // end match
+    } // end loop
 
     println!("\nThe End ...\n");
 }
-
-enum Commands {
-    Ready,
-    Guess_Number(u32),
-    Response(Ordering),
-}
-
-const MSG_GT: &str = "Your number is greater than guessed number ...";
-const MSG_LT: &str = "Your number is less than guessed number ...";
-const MSG_EQ: &str = "Your number is equals guessed number ...";
-const MSG_WIN: &str = "Good Job You Win ...";
