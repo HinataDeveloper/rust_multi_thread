@@ -1,5 +1,7 @@
 //! Select a random number and then try for finding it
 //! by binary search pattern.
+//! With dependency to rand crate.
+//! Rust version nightly 1.99.0
 
 use rand::RngExt;
 use std::cmp::Ordering;
