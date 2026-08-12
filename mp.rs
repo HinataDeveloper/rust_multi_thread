@@ -1,5 +1,5 @@
-//! sharing data between threads.
-//! ...
+//! Sharing data between threads.
+//! How to use Box?
 
 fn main() {
     println!("\n");
