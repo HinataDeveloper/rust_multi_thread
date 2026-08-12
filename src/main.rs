@@ -1,4 +1,5 @@
-//! I am learning how to using Mutex.
+//! sharing data between threads.
+//! ...
 
 fn main() {
     println!("\n");
