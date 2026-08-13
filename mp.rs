@@ -1,6 +1,7 @@
 // Date: Thu Aug 13 2026
+
 // Project: Sharing data between threads
-// Goal: Using Arc to share data between threads
+// Goal: ...
 // Dependency: Without dependency
 
 // Hardware Mode: Lenovo IdeaPad Z500
