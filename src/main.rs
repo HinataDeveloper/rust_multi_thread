@@ -1,7 +1,7 @@
 // Date: Thu Aug 13 2026
 
 // Project: Sharing data between threads
-// Goal: ...
+// Goal: How to use Box
 // Dependency: Without dependency
 
 // Hardware Mode: Lenovo IdeaPad Z500
@@ -15,10 +15,9 @@
 // GNOME Version: 50
 // Windowing System: Wayland
 
-// rustc 1.99.0-nightly (3d6c19bb9 2026-08-11)
-// cargo 1.99.0-nightly (b07e5a086 2026-08-07)
+// rustc 1.99.0-nightly (c98d0cb27 2026-08-12)
+// cargo 1.99.0-nightly (eb98b54bc 2026-08-11)
 // rustup 1.29.0 (28d1352db 2026-03-05)
-
 
 fn main() {
     println!("\n");
