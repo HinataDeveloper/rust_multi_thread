@@ -1,7 +1,7 @@
 // Date: Thu Aug 15 2026
 
 // Project: Sharing data between threads
-// Goal: How to use Box
+// Goal: ...
 // Dependency: Without dependency
 
 // Hardware Mode: Lenovo IdeaPad Z500
